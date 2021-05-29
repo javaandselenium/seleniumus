@@ -17,9 +17,11 @@ public class Test0 {
 		//WebElement ele = driver.findElement(By.id("email"));
 		Facebook f =new Facebook(driver);
 	       driver.navigate().refresh();
-	       Thread.sleep(3000);
+	       Thread.sleep(5000);
 	      // ele.sendKeys("admin");
 	       f.emailAddresstb("admin");
+	       f.passwordtextbox("gegfgftfhg");
+	       f.loginbutton();
 	
 	
 	}

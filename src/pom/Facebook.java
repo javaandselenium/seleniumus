@@ -10,12 +10,28 @@ public class Facebook {
 	@FindBy(id="email")
 	private WebElement emailtb;
 	
+	@FindBy(id="pass")
+	private WebElement passwordtb;
+	
+	@FindBy(xpath="//button[@name='login']")
+	private WebElement loginbtn;
+	
+	
+	
 	public Facebook(WebDriver driver) {
 		PageFactory.initElements(driver,this);
 	}
 	
 	public void emailAddresstb(String email) {
 		emailtb.sendKeys(email);
+	}
+	
+	public void passwordtextbox(String pwd) {
+		passwordtb.sendKeys(pwd);
+	}
+	
+	public void loginbutton() {
+		loginbtn.click();
 	}
 
 }
